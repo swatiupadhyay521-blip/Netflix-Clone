@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrendSpark Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🔥 TrendSpark Dashboard</h1>
+
+<div class="top">
+
+<input type="text" id="idea" placeholder="Enter Content Idea">
+
+<select id="platform">
+<option>Instagram</option>
+<option>YouTube</option>
+<option>Pinterest</option>
+<option>LinkedIn</option>
+</select>
+
+<button onclick="generateIdea()">Generate</button>
+
+</div>
+
+<input type="text" id="search" placeholder="Search Ideas..." onkeyup="searchIdeas()">
+
+<div id="ideas"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
