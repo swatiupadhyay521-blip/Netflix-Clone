@@ -26,8 +26,7 @@ header .box{
 }
 
 nav{
-    
-  width:80%;
+    width:min(1200px,90%);
     margin:auto;
     display:flex;
     justify-content:space-between;
@@ -401,140 +400,6 @@ footer p{
 }
 
 
-@media screen and (max-width:768px){
-
-    /* Header */
-    header,
-    header .box{
-        height: 100vh;
-    }
-
-    /* Navbar */
-    nav{
-        width:95%;
-        top:10px;
-        left:50%;
-        transform:translateX(-50%);
-        padding:0 10px;
-    }
-
-    nav img{
-        width:100px;
-    }
-
-    .language-select{
-        padding:4px 8px;
-    }
-
-    select{
-        font-size:12px;
-    }
-
-    .btn2{
-        padding:6px 10px;
-        font-size:12px;
-    }
-
-    /* Hero content */
-    .content{
-        width:90%;
-        max-width:none;
-        padding-top:120px;
-        gap:15px;
-        text-align:center;
-    }
-
-    .content > :nth-child(1){
-        font-size:2.3rem;
-        line-height:1.2;
-        margin-bottom:10px;
-    }
-
-    .content > :nth-child(2){
-        font-size:1.2rem;
-    }
-
-    .content > :nth-child(3){
-        font-size:1rem;
-    }
-
-    /* Email section */
-    .search{
-        flex-direction:column;
-        width:100%;
-        align-items:center;
-        gap:10px;
-    }
-
-    .content input,
-    #search input{
-        width:90%;
-        padding:15px;
-        font-size:1rem;
-    }
-
-    .btn-start,
-    #search .btn-start{
-        width:90%;
-        padding:15px;
-        font-size:18px;
-        text-align:center;
-    }
-
-    /* Trending section */
-    .container,
-    .container2,
-    .container3,
-    footer{
-        width:95%;
-        margin:30px auto;
-    }
-
-    /* Cards section */
-    .section{
-        flex-direction:column;
-        width:100%;
-        height:auto;
-        gap:20px;
-    }
-
-    .card2{
-        width:100%;
-        height:auto;
-        min-height:220px;
-    }
-
-    .small{
-        position:static;
-        margin-left:auto;
-        margin-top:20px;
-    }
-
-    /* FAQ */
-    .faq{
-        font-size:1rem;
-        padding:18px;
-    }
-
-    .questionbox{
-        width:100%;
-    }
-
-    /* Footer */
-    .foot-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-    }
-
-    footer{
-        width:95%;
-    }
-
-    /* Prevent horizontal scroll */
-    body{
-        overflow-x:hidden;
-    }
-}
 
 
 
@@ -558,177 +423,185 @@ footer p{
     padding: 12px 10px;
 }
 
+@media screen and (max-width:768px){
 
+*{
+    overflow-x:hidden;
+}
 
+header,
+header .box{
+    height:100vh;
+}
+
+nav{
+    width:92%;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav img{
+    width:100px;
+    height:auto;
+}
+
+nav>div{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.language-select{
+    top:0;
+    padding:4px 8px;
+}
+
+.language-select img{
+    width:16px;
+    height:16px;
+}
+
+.language-select select{
+    font-size:12px;
+}
+
+.btn2{
+    padding:8px 14px;
+    font-size:13px;
+}
 
 .content{
-    width:90%;
-    max-width:700px;
+    max-width:92%;
+    height:100%;
+    justify-content:center;
+    gap:18px;
+    padding-top:25px;
+}
+
+.content>:nth-child(1){
+    font-size:2rem;
+    line-height:1.15;
+    margin-bottom:0;
+}
+
+.content>:nth-child(2){
+    font-size:1.15rem;
+    margin-bottom:0;
+}
+
+.content>:nth-child(3){
+    font-size:.95rem;
+    line-height:1.4;
+    text-align:center;
+}
+
+.search{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
 
 .content input{
-    width:350px;
-    padding:18px 10px;
+    width:100%;
+    padding:16px;
+    font-size:16px;
+}
+
+.btn-start{
+    width:100%;
+    text-align:center;
+    font-size:18px;
+    padding:15px;
+}
+
+.curved-section{
+    height:28px;
+}
+
+.container,
+.container2,
+.container3,
+.content2,
+footer{
+      height:auto !important;
+    overflow:visible;
+
+.section-title{
+    font-size:1.4rem;
+}
+
+.card{
+    flex:0 0 140px;
+    width:140px;
+    height:210px;
+}
+
+.number{
+    font-size:58px;
+}
+
+.section{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.card2{
+    width:100%;
+    height:auto;
+    min-height:220px;
+}
+
+.small{
+    position:static;
+    margin-left:auto;
+    margin-top:20px;
+}
+
+.questionbox{
+    width:100%;
+}
+
+.faq{
+    font-size:1.1rem;
+    padding:20px;
+}
+
+.oop{
+    width:28px;
+    height:28px;
+}
+
+.content2 .search{
+    flex-direction:column;
 }
 
 #search input{
-    width:500px;
-    padding:12px 10px;
+    width:100%;
+    padding:16px;
+    font-size:16px;
 }
 
+#search .btn-start{
+    width:100%;
+    font-size:18px;
+}
 
+.foot-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
 
-@media screen and (max-width: 768px) {
+footer p{
+    margin-top:40px;
+}
 
-    /* General */
-    body {
-        overflow-x: hidden;
-    }
-
-    /* Header */
-    header,
-    header .box {
-        height: 100vh;
-    }
-
-    /* Navbar */
-    nav {
-        width: 95%;
-        top: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    nav img {
-        width: 100px;
-    }
-
-    .language-select {
-        padding: 4px 8px;
-    }
-
-    .btn2 {
-        padding: 6px 10px;
-        font-size: 12px;
-    }
-
-    /* Hero Section */
-    .content {
-        width: 90%;
-        max-width: 100%;
-        padding-top: 120px;
-        gap: 15px;
-    }
-
-    .content > :nth-child(1) {
-        font-size: 2.2rem;
-        line-height: 1.2;
-    }
-
-    .content > :nth-child(2) {
-        font-size: 1.2rem;
-    }
-
-    .content > :nth-child(3) {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    /* Email form */
-    .search {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .content input,
-    #search input {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .btn-start,
-    #search .btn-start {
-        width: 90%;
-        padding: 15px;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    /* Trending */
-    .container {
-        width: 95%;
-        margin: 30px auto;
-        height: auto;
-    }
-
-    .slider {
-        gap: 10px;
-    }
-
-    .card {
-        flex: 0 0 140px;
-        width: 140px;
-        height: 220px;
-    }
-
-    .number {
-        font-size: 50px;
-        left: -10px;
-    }
-
-    /* More Reasons Cards */
-    .container2 {
-        width: 95%;
-        margin: 30px auto;
-        height: auto;
-        overflow: visible;
-    }
-
-    .section {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        gap: 20px;
-    }
-
-    .card2 {
-        width: 100%;
-        min-height: 220px;
-        height: auto;
-    }
-
-    .small {
-        position: static;
-        margin-left: auto;
-        margin-top: 20px;
-    }
-
-    /* FAQ */
-    .container3 {
-        width: 95%;
-        margin: 30px auto;
-        height: auto;
-    }
-
-    .questionbox {
-        width: 100%;
-    }
-
-    .faq {
-        font-size: 1rem;
-        padding: 18px;
-    }
-
-    /* Footer */
-    footer {
-        width: 95%;
-        margin: 50px auto;
-    }
-
-    .foot-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+}
 }
